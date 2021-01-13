@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="600" viewBox="0 0 980 600">
+	<style type="text/css"><![CDATA[
+		:root {
+			--line: #bbffbb;
+			--box: #ddddff;
+		}	
+		#group {
+			transform: translate(-100px, -50px) translate(50%, 50%);
+		}
+		svg {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		path {
+			fill: none;
+			stroke: var(--line);
+			stroke-width: 5px;
+		}
+		.mover-style {
+			rx: 6;
+			fill: #bbbbff;
+			stroke: var(--box);
+			stroke-width: 5px;
+			fill-opacity: 0.5;
+		}
+		.mover {
+			width: 40px;
+			height: 40px;
+			transform: translate(-20px, -20px);
+			offset-path: path('M0,0 C0,100 200,0 200,100');
+		        animation: move 6s infinite alternate ease-in-out;
+		}
+		@keyframes move {
+			0% {
+				offset-distance: 0%;
+			}
+			100% {
+				offset-distance: 100%;
+			}
+		}
+	]]></style>
+	<rect x="0" y="0" width="980" height="600" rx="10" fill="#101010"/>
+	<g id="group">	
+		<path d="M0,0 C0,100 200,0 200,100"></path>
+		<rect class="mover mover-style"/>
+	</g>
+</svg>
+
