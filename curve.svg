@@ -41,7 +41,7 @@
 			}
 		}
 	]]></style>
-	<rect x="0" y="0" width="980" height="600" rx="10" fill="#101010"/>
+	<rect x="0" y="0" width="980" height="600" rx="15" fill="#101010"/>
 	<g id="group">	
 		<path d="M0,0 C0,100 200,0 200,100"></path>
 		<rect class="mover mover-style"/>
