@@ -6,7 +6,7 @@
 ![hilbert](hilbert.svg)
 
 ### hilbert-native-style
-![hilbert](hilnew.svg)
+![hilbert](hilbert-native-style.svg)
 
 ### orbits
 ![orbits](orbits.svg)
