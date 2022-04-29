@@ -3,7 +3,10 @@
 `css` is a collection of SVG + CSS animation transform tests for github README rendering
 
 ### hilbert-inline-style
-![hilbert](hilbert-inline-style.svg)
+![hilbert-inline-style](hilbert-inline-style.svg)
+
+### hilbert-nested-keyframes
+![hilbert-nested-keyframes](hilbert-nested-keyframes.svg)
 
 ### orbits
 ![orbits](orbits.svg)

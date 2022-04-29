@@ -41,24 +41,60 @@
 		}
 		.mover {
 			offset-path: path(var(--path1));
-		        animation: move 40s infinite alternate ease-in-out;
+			offset-rotate: 0deg;
+		        animation: move 30s infinite alternate ease-in-out;
+		}
+		.rotater {
+		        animation: rotate 15s infinite alternate ease-in-out;
+		}
+		.scaler {
+		        animation: scale 30s infinite alternate ease-in-out;
 		}
 		@keyframes move {
 			0% {
 				offset-distance: 0%;
 			}
+			40%, 60% {
+				offset-distance: 50%;
+			}
 			100% {
 				offset-distance: 100%;
+			}
+		}
+		@keyframes scale {
+			0%, 40% {
+				transform: scale(1, 1);
+			}
+			45%, 55% {
+				transform: scale(2, 2);
+			}
+			60%, 100% {
+				transform: scale(1, 1);
+			}
+		}
+		@keyframes rotate {
+			0% {
+				transform: rotate(0deg);
+			}
+			20%, 80% {
+				transform: rotate(360deg);
+			}
+			100% {
+				transform: rotate(0deg);
 			}
 		}
 	</style>
 	<rect x="0" y="0" width="980" height="600" rx="15" fill="#101010"/>
 	<g id="group">
+		<g class="mover">
+			<g class="rotater">
+				<g class="scaler">
+					<rect class="cursor"/>
+				</g>
+			</g>
+		</g>
 		<path id="path1"></path>
 		<rect x="0" y="245" class="node"/>
 		<rect x="245" y="245" class="node"/>
-		<g class="mover">
-			<rect class="cursor"/>
-		</g>
 	</g>
 </svg>

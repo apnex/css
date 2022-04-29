@@ -1,0 +1,11 @@
+## hilbert line animated draw (stroke-ffset) with leading node
+## multi-layer keyframes - separate rotate and path follow
+
+## animate paths
+https://css-tricks.com/animate-svg-path-changes-in-css/
+
+## path() morphing
+https://css-tricks.com/many-tools-shape-morphing/
+
+## shapeshifter
+https://shapeshifter.design/
