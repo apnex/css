@@ -9,3 +9,6 @@ https://css-tricks.com/many-tools-shape-morphing/
 
 ## shapeshifter
 https://shapeshifter.design/
+
+## multistep transitions
+https://css-tricks.com/using-multi-step-animations-transitions/

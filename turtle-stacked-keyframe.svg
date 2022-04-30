@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 600">
+	<style type="text/css">
+	svg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	:root {
+		--path1: "M 0 0 L -50 0 L -50 -50";
+		--line: #bbffbb;
+		--box: #ddddff;
+	}
+	.path1 {
+		d: path(var(--path1));
+		stroke: var(--line);
+		stroke-width: 5px;
+		fill: none;
+	}
+	#default {
+		transform: translate(0px, 0px) translate(50%, 50%);
+	}
+	.cursor {
+		rx: 6;
+		fill: #bbbbff;
+		stroke: var(--box);
+		stroke-width: 5px;
+		fill-opacity: 0.5;
+		width: 40px;
+		height: 40px;
+		transform: translate(-20px, -20px);
+	}
+	.turner {
+		offset-path: path(var(--path1));
+		animation:
+			turn 10s linear infinite alternate forwards,
+			move 10s linear infinite alternate forwards;
+	}
+	@keyframes turn {
+		0%, 12.5% {
+			transform: rotate(0deg);
+		}
+		25%, 62.5% {
+			transform: rotate(-90deg);
+		}
+		75%, 87.5% {
+			transform: rotate(0deg);
+		}
+	}
+	@keyframes move {
+		0%, 37.5% {
+			offset-distance: 0%;
+		}
+		50%, 87.5% {
+			offset-distance: 50%;
+		}
+		100% {
+			offset-distance: 100%;
+		}
+	}
+	</style>
+	<rect x="0" y="0" width="980" height="600" rx="15" fill="#101010"/>
+	<g id="default">
+		<path class="path1"></path>
+		<g class="mover">
+			<g class="turner">
+				<rect class="cursor"/>
+			</g>
+		</g>
+	</g>
+</svg>

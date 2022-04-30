@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 600">
+	<style type="text/css">
+	svg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	:root {
+		--path1: "M 0 0 L 0 -200 L 0 -200 L 200 -200 L 200 -200 L 200 0 L 200 0 L 400 0 L 400 0 L 400 -200 L 400 -400 L 400 -400 L 200 -400";
+		--line: #bbffbb;
+		--box: #ddddff;
+	}
+	.path1 {
+		d: path(var(--path1));
+		stroke: var(--line);
+		stroke-width: 5px;
+		fill: none;
+	}
+	#default {
+		transform: translate(-200px, 200px) translate(50%, 50%);
+	}
+	.cursor {
+		rx: 6;
+		fill: #bbbbff;
+		stroke: var(--box);
+		stroke-width: 5px;
+		fill-opacity: 0.5;
+		width: 40px;
+		height: 40px;
+		transform: translate(-20px, -20px);
+	}
+	.turner {
+		offset-path: path(var(--path1));
+		animation:
+			move 20s linear infinite alternate forwards;
+	}
+	@keyframes move {
+		0.0% {
+			offset-distance: 0%;
+			transform: rotate(0deg);
+		}
+		8.3% {
+			offset-distance: 14.285714285714286%;
+			transform: rotate(0deg);
+		}
+		16.7% {
+			offset-distance: 14.285714285714286%;
+			transform: rotate(90deg);
+		}
+		25.0% {
+			offset-distance: 28.571428571428573%;
+			transform: rotate(90deg);
+		}
+		33.3% {
+			offset-distance: 28.571428571428573%;
+			transform: rotate(180deg);
+		}
+		41.7% {
+			offset-distance: 42.85714285714286%;
+			transform: rotate(180deg);
+		}
+		50.0% {
+			offset-distance: 42.85714285714286%;
+			transform: rotate(90deg);
+		}
+		58.3% {
+			offset-distance: 57.142857142857146%;
+			transform: rotate(90deg);
+		}
+		66.7% {
+			offset-distance: 57.142857142857146%;
+			transform: rotate(0deg);
+		}
+		75.0% {
+			offset-distance: 71.42857142857143%;
+			transform: rotate(0deg);
+		}
+		83.3% {
+			offset-distance: 85.71428571428572%;
+			transform: rotate(0deg);
+		}
+		91.7% {
+			offset-distance: 85.71428571428572%;
+			transform: rotate(-90deg);
+		}
+		100.0% {
+			offset-distance: 100%;
+			transform: rotate(-90deg);
+		}
+	}
+	</style>
+	<rect x="0" y="0" width="980" height="600" rx="15" fill="#101010"/>
+	<g id="default">
+		<path class="path1"></path>
+		<g class="mover">
+			<g class="turner">
+				<rect class="cursor"/>
+			</g>
+		</g>
+	</g>
+</svg>
