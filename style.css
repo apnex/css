@@ -1,0 +1,70 @@
+svg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+:root {
+	--path1: "M 0 0 L 0 -100 L 100 -200";
+	--line: #bbffbb;
+	--box: #ddddff;
+}
+.path1 {
+	d: path(var(--path1));
+	stroke: var(--line);
+	stroke-width: 5px;
+	fill: none;
+}
+#default {
+	transform: translate(-200px, 200px) translate(50%, 50%);
+}
+.cursor {
+	rx: 6;
+	fill: #bbbbff;
+	stroke: var(--box);
+	stroke-width: 5px;
+	fill-opacity: 0.5;
+	width: 40px;
+	height: 40px;
+	transform: translate(-20px, -20px);
+}
+.turner {
+	offset-path: path(var(--path1));
+	offset-rotate: 0deg;
+	animation:
+		move 5s linear infinite alternate forwards;
+}
+@keyframes move {
+	0.00% {
+		offset-distance: 0.00%;
+		transform: rotate(0deg);
+	}
+	14.29% {
+		offset-distance: 0.00%;
+		transform: rotate(0deg);
+	}
+	28.57% {
+		offset-distance: 41.42%;
+		transform: rotate(0deg);
+	}
+	42.86% {
+		offset-distance: 41.42%;
+		transform: rotate(0deg);
+	}
+	57.14% {
+		offset-distance: 41.42%;
+		transform: rotate(45deg);
+	}
+	71.43% {
+		offset-distance: 41.42%;
+		transform: rotate(45deg);
+	}
+	85.71% {
+		offset-distance: 100.00%;
+		transform: rotate(45deg);
+	}
+	100.00% {
+		offset-distance: 100.00%;
+		transform: rotate(45deg);
+	}
+}

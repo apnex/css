@@ -20,11 +20,28 @@
 	#default {
 		transform: translate(-200px, 200px) translate(50%, 50%);
 	}
+	.ninja-head {
+		r: 6;
+		fill: #ff8f00;
+		stroke: #ffd54f;
+		stroke-width: 2px;
+		fill-opacity: 1;
+	}
+	.ninja-body {
+		rx: 2;
+		fill: #ff8f00;
+		stroke: #ffd54f;
+		stroke-width: 2px;
+		fill-opacity: 1;
+		width: 10px;
+		height: 10px;
+		transform: translate(-5px, -25px);
+	}
 	.cursor {
 		rx: 6;
 		fill: #bbbbff;
 		stroke: var(--box);
-		stroke-width: 5px;
+		stroke-width: 4px;
 		fill-opacity: 0.5;
 		width: 40px;
 		height: 40px;
@@ -32,6 +49,7 @@
 	}
 	.turner {
 		offset-path: path(var(--path1));
+		offset-rotate: 0deg;
 		animation:
 			move 20s linear infinite alternate forwards;
 	}
@@ -96,6 +114,8 @@
 		<g class="mover">
 			<g class="turner">
 				<rect class="cursor"/>
+				<rect class="ninja-body"/>
+				<circle class="ninja-head"/>
 			</g>
 		</g>
 	</g>

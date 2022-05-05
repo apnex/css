@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 600">
+	<style>
+		@import url(style.css);
+	</style>
+	<rect x="0" y="0" width="980" height="600" rx="15" fill="#101010"/>
+	<g id="default">
+		<path class="path1"></path>
+		<g class="mover">
+			<g class="turner">
+				<rect class="cursor"/>
+			</g>
+		</g>
+	</g>
+</svg>
